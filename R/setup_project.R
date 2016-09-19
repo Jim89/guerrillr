@@ -9,9 +9,6 @@
 #' @examples
 #' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
 
-name <- "test_project"
-directory <- "/media/jim/Storage/Documents"
-
 setup_project <- function(name, directory, overwrite = FALSE,
                           rstudio_project = FALSE) {
 
@@ -39,6 +36,7 @@ setup_project <- function(name, directory, overwrite = FALSE,
     subs <- c("/wp", "/data", "/pm", "/pm/01_initiate", "/pm/02_deliver",
                     "/pm/03_close")
     subfolders <- paste0(dir, subs)
+    # Loop and create sub-folders
     quiet <- lapply(subfolders, dir.create)
 
     # Does the user require an Rstudio project?
@@ -59,6 +57,3 @@ setup_project <- function(name, directory, overwrite = FALSE,
         cat(paste(contents, collapse="\n"), file = path)
     }
 }
-
-
-setup_project(name, directory, T, T)
