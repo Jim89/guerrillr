@@ -1,10 +1,19 @@
 # guerrillr
 
-A package for using Guerrilla Analytics principles in R.
+A package for setting up and working with Guerrilla Analytics project structures from R.
 
 ## Guerrilla Analytics
 
 Developed by Enda Ridge, Guerrilla Analytics is a set of simple princples and practices for building and managing data science projects. For more information check out the [website](https://guerrilla-analytics.net/) or buy the [book](https://guerrilla-analytics.net/store/).
+
+## Installation
+
+You can install this package directly from GitHub using the `devtools` library as follows:
+
+```
+install.packages("devtools")
+devtools::install_github("jim89/guerrillr")
+```
 
 ### Package version information
 
