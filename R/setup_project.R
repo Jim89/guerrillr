@@ -1,11 +1,16 @@
-#' Guerrilla Analytics project set up
+#' Guerrilla Analytics project set up.
 #'
-#' This function creates a basic project skeleton following the Guerilla Analytics structure.
+#' This function creates a basic project skeleton following the Guerilla
+#' Analytics structure.
 #' @param name The name of the project
-#' @param directory The file path to the directory in which you want to create the project.
-#' @param overwrite If the directory already exists, do you wish to overwrite it and its contents? Defaults to FALSE
-#' @param rstudio_project Create an Rstudio project along with the directory? Defaults to FALSE.
+#' @param directory The file path to the directory in which you want to create
+#'   the project.
+#' @param overwrite If the directory already exists, do you wish to overwrite it
+#'   and its contents? Defaults to FALSE.
+#' @param rstudio_project Create an Rstudio project along with the directory?
+#'   Defaults to FALSE.
 #' @export
+#' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 #' @examples
 #' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
 

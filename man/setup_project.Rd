@@ -2,19 +2,30 @@
 % Please edit documentation in R/setup_project.R
 \name{setup_project}
 \alias{setup_project}
-\title{Guerrilla Analytics project set up}
+\title{Guerrilla Analytics project set up.}
 \usage{
-setup_project(directory, overwrite = FALSE)
+setup_project(name, directory, overwrite = FALSE, rstudio_project = FALSE)
 }
 \arguments{
-\item{directory}{The file path to the directory in which you want to create the project.}
+\item{name}{The name of the project}
 
-\item{overwrite}{If the directory already exists, do you wish to overwrite it and its contents? Defaults to FALSE}
+\item{directory}{The file path to the directory in which you want to create
+the project.}
+
+\item{overwrite}{If the directory already exists, do you wish to overwrite it
+and its contents? Defaults to FALSE.}
+
+\item{rstudio_project}{Create an Rstudio project along with the directory?
+Defaults to FALSE.}
 }
 \description{
-This function creates a basic project skeleton following the Guerilla Analytics structure.
+This function creates a basic project skeleton following the Guerilla
+Analytics structure.
 }
 \examples{
-setup_project("/home/jim/Documents/test_project", overwrite = FALSE)
+setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
+}
+\references{
+"Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }
 
