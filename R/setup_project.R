@@ -1,44 +1,64 @@
 #' Guerrilla Analytics project set up
 #'
 #' This function creates a basic project skeleton following the Guerilla Analytics structure.
+#' @param name The name of the project
 #' @param directory The file path to the directory in which you want to create the project.
 #' @param overwrite If the directory already exists, do you wish to overwrite it and its contents? Defaults to FALSE
+#' @param rstudio_project Create an Rstudio project along with the directory? Defaults to FALSE.
 #' @export
 #' @examples
-#' setup_project("/home/jim/Documents/test_project", overwrite = FALSE)
+#' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
 
+name <- "test_project"
+directory <- "/media/jim/Storage/Documents"
 
-setup_project <- function(directory, overwrite = FALSE) {
+setup_project <- function(name, directory, overwrite = FALSE,
+                          rstudio_project = FALSE) {
 
-    # Check if directory already exists
-    already_exists <- dir.exists(directory)
+    # Create full file path from name and directory
+    dir <- paste0(directory, "/", name)
+
+    # Check if named project directory already exists
+    already_exists <- dir.exists(dir)
 
     # If it doesn't exist, create it
     if (!already_exists) {
-        dir.create(directory)
+        dir.create(dir)
     } else {
         # If it does exist and overwrite is false, stop and throw error
         if (overwrite == FALSE) {
             stop("Directory already exists. Change the directory or set overwrite to be TRUE")
         } else {
             message("Directory already exists. Overwriting")
-            unlink(directory, recursive = TRUE)
-            dir.create(directory, showWarnings = FALSE)
+            unlink(dir, recursive = TRUE)
+            dir.create(dir, showWarnings = FALSE)
         }
     }
 
     # Create the paths for sub-folders of the main directory
-    wp <- paste0(directory, "/wp")
-    data <- paste0(directory, "/data")
-    pm <- paste0(directory, "/pm")
-    pm_init <- paste0(directory, "/pm/01_initiate")
-    pm_deliver <- paste0(directory, "/pm/02_deliver")
-    pm_close <- paste0(directory, "/pm/03_close")
+    subs <- c("/wp", "/data", "/pm", "/pm/01_initiate", "/pm/02_deliver",
+                    "/pm/03_close")
+    subfolders <- paste0(dir, subs)
+    quiet <- lapply(subfolders, dir.create)
 
-    # Set up list and loop over
-    dirs_to_make <- c(wp, data, pm, pm_init, pm_deliver, pm_close)
-    quiet <- lapply(dirs_to_make, dir.create)
+    # Does the user require an Rstudio project?
+    if (rstudio_project) {
+        # Print handy message
+        message("Adding RStudio project file")
 
+        # Set up path to new file
+        path <- file.path(dir, paste0(name, ".Rproj"))
+
+        contents <- c("Version: 1.0", "", "RestoreWorkspace: No",
+                      "SaveWorkspace: No", "AlwaysSaveHistory: Default", "",
+                      "EnableCodeIndexing: Yes", "UseSpacesForTab: Yes",
+                      "NumSpacesForTab: 2", "Encoding: UTF-8", "",
+                      "RnwWeave: Sweave", "LaTeX: pdfLaTeX")
+
+        # Push contents out to project file
+        cat(paste(contents, collapse="\n"), file = path)
+    }
 }
 
 
+setup_project(name, directory, T, T)
