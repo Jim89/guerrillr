@@ -4,7 +4,8 @@
 \alias{setup_project}
 \title{Guerrilla Analytics project set up.}
 \usage{
-setup_project(name, directory, overwrite = FALSE, rstudio_project = FALSE)
+setup_project(name, directory, overwrite = FALSE, rstudio_project = FALSE,
+  switch_to = FALSE)
 }
 \arguments{
 \item{name}{The name of the project}
@@ -17,13 +18,18 @@ and its contents? Defaults to FALSE.}
 
 \item{rstudio_project}{Create an Rstudio project along with the directory?
 Defaults to FALSE.}
+
+\item{switch_to}{Switch immediately to the new project? Defaults to FALSE.}
 }
 \description{
 This function creates a basic project skeleton following the Guerilla
 Analytics structure.
 }
 \examples{
-setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
+setup_project("test_project", "/home/jim/Documents", overwrite = FALSE,
+rstudio_project = FALSE, switch_to = FALSE)
+setup_project("test_project", "/home/jim/Documents", overwrite = FALSE,
+rstudio_project = TRUE, switch_to = FALSE)
 }
 \references{
 "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})

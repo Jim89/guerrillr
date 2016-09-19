@@ -9,13 +9,17 @@
 #'   and its contents? Defaults to FALSE.
 #' @param rstudio_project Create an Rstudio project along with the directory?
 #'   Defaults to FALSE.
+#' @param switch_to Switch immediately to the new project? Defaults to FALSE.
 #' @export
 #' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 #' @examples
-#' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE)
+#' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE,
+#' rstudio_project = FALSE, switch_to = FALSE)
+#' setup_project("test_project", "/home/jim/Documents", overwrite = FALSE,
+#' rstudio_project = TRUE, switch_to = FALSE)
 
 setup_project <- function(name, directory, overwrite = FALSE,
-                          rstudio_project = FALSE) {
+                          rstudio_project = FALSE, switch_to = FALSE) {
 
     # Create full file path from name and directory
     dir <- paste0(directory, "/", name)
@@ -60,5 +64,9 @@ setup_project <- function(name, directory, overwrite = FALSE,
 
         # Push contents out to project file
         cat(paste(contents, collapse="\n"), file = path)
+    }
+
+    if (switch_to) {
+      setwd(dir)
     }
 }
