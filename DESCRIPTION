@@ -1,12 +1,17 @@
 Package: guerrillr
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Guerrilla Analytics workflows for R
+Version: 0.0.1
+Authors@R: c(person("Leach", "Jim", email = "jimmy22theave@gmail.com", role = c("aut", "cre")),
+             person("Ridge", "Enda", role = "ctb"))
+Description: A small package to make using Guerrilla Analytics
+    principles easy from inside R. For more information about
+    Guerrilla Analytics see https://guerrilla-analytics.net/
+    This package provides simple ways to: set up a GA-style project structure,
+    and easily create and log new work products and data items.
+URL: https://github.com/Jim89/guerrillr
+BugReports: https://github.com/Jim89/guerrillr/issues
+License: CC0
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1
