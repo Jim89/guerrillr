@@ -2,12 +2,12 @@
 % Please edit documentation in R/create_wp.R
 \name{create_wp}
 \alias{create_wp}
-\title{Create a new work product.}
+\title{Create a new work product}
 \usage{
 create_wp()
 }
 \description{
-Create a new work product.
+A function created purely to facilitate an RStudio addin to create a new work product.
 }
 \references{
 "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
