@@ -4,7 +4,7 @@ A package for setting up and working with Guerrilla Analytics project structures
 
 ## Guerrilla Analytics
 
-Developed by Enda Ridge, Guerrilla Analytics is a set of simple princples and practices for building and managing data science projects. For more information check out the [website](https://guerrilla-analytics.net/) or buy the [book](https://guerrilla-analytics.net/store/).
+Developed by Enda Ridge, Guerrilla Analytics is a set of simple princples and practices for building and managing data science projects. For more information check out the [website](http://guerrilla-analytics.net/) or buy the [book](http://guerrilla-analytics.net/book/).
 
 ## Installation
 
