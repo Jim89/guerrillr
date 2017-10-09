@@ -34,4 +34,3 @@ rstudio_project = TRUE, switch_to = FALSE)
 \references{
 "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }
-

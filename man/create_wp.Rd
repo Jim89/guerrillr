@@ -29,4 +29,3 @@ create_wp("wp", "Customer complaints summary", "Jim Leach", "Enda Ridge", "Summa
 \references{
 "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }
-
