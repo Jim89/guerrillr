@@ -1,4 +1,9 @@
-#' Guerrilla Analytics project set up.
+#' Set up a Guerrilla Analytics project
+#'
+#' A function created purely to facilitate the [project template](https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html) mechanism in RStudio
+#'
+#' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+
 create_ga_project <- function(path, ...) {
   # Setup directories ----------------------------------------------------------
   # Check to see if the directory exists (if it does, stop)

@@ -2,10 +2,13 @@
 % Please edit documentation in R/create_ga_project.R
 \name{create_ga_project}
 \alias{create_ga_project}
-\title{Guerrilla Analytics project set up.}
+\title{Set up a Guerrilla Analytics project}
 \usage{
 create_ga_project(path, ...)
 }
 \description{
-Guerrilla Analytics project set up.
+A function created purely to facilitate the \href{https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html}{project template} mechanism in RStudio
+}
+\references{
+"Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }

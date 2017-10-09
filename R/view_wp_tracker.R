@@ -1,5 +1,7 @@
 #' View the work products tracker
 #'
+#' A function created purely to facilitate an RStudio addin to display the current work products tracker.
+#'
 #' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 
 
@@ -28,6 +30,12 @@ view_wp_tracker <- function() {
 
     # Set the path
     tracker_path <- file.path(wp_path, "work-products-tracker.csv")
+
+    # Check if the tracker exists - if it doesn't we can't do much!
+    if ( !file.exists(tracker_path) ) {
+      message("Work products tracker does not exist. Did you initialise the project with one?")
+      shiny::stopApp()
+    }
 
     # Get the current tracker
     current_tracker <- read.csv(
