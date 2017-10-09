@@ -1,0 +1,10 @@
+Name: New Work Product
+Description: Run guerrillr::create_wp() to create a new work product.
+Binding: create_wp
+Interactive: true
+
+Name: View Work Products
+Description: Run guerrillr::view_wp_tracker() to view the work products tracker.
+Binding: view_wp_tracker
+Interactive: true
+
