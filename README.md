@@ -19,3 +19,4 @@ devtools::install_github("jim89/guerrillr")
 
 * 0.0.1 - initial package with one function to create project structure;
 * 0.0.2 - added create_wp() function to create and log new work products
+* 0.0.3 - Re-worked package to use the new Rstudio [project templates](https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html) for creating the project, and [addins](https://rstudio.github.io/rstudioaddins/) for creating and viewing work products
