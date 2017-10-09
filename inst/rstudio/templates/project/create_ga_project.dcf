@@ -1,0 +1,18 @@
+Binding: create_ga_project
+Title: Guerrilla Analytics Project
+OpenFiles: INDEX
+
+Parameter: project_name
+Widget: TextInput
+Label: Project Name
+Position: left
+
+Parameter: project_author
+Widget: TextInput
+Label: Project Author(s)
+Position: left
+
+Parameter: make_trackers
+Widget: CheckboxInput
+Label: Add data and work-product trackers
+Default: On
