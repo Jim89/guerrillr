@@ -87,5 +87,28 @@ create_wp <- function(title, owner, deliver_to, remark, wp_dir = "wp") {
 
 }
 
+create_wp <- function() {
+  # Path to wp tracker
+  wp_path <- file.path(".", "wp", "work-products-tracker.csv")
+
+  # Read the work product tracker
+  current_tracker <- read.csv(wp_path, stringsAsFactors = FALSE)
+
+  current_wp <- data.frame(
+    name = "Test",
+    prepared_by = "Jim",
+    delivered_to = "Jo",
+    version = max(1, current_tracker$version + 1),
+    last_updated = as.character(Sys.Date()),
+    comments = "A test comment",
+    stringsAsFactors = FALSE
+  )
+
+  # Combine them
+  new_tracker <- rbind(current_tracker, current_wp)
+
+  # Write back out to file
+  write.csv(new_tracker, wp_path, row.names = FALSE)
+}
 
 
