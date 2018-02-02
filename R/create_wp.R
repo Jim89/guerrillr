@@ -1,10 +1,11 @@
 #' Create a new work product
 #'
-#' A function created purely to facilitate an RStudio addin to create a new work product.
+#' A function created purely to facilitate an RStudio addin to create a new work
+#' product.
 #'
-#' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
-
-
+#' @references "Guerrilla Analytics: A Practical Approach to Working with Data",
+#'   Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+#' @export
 create_wp <- function() {
 
   # Create the UI --------------------------------------------------------------
@@ -14,6 +15,8 @@ create_wp <- function() {
       shiny::textInput("name", "Work product name"),
       shiny::textInput("folder", "Folder name"),
       shiny::em("(Folder name should be short)"),
+      shiny::br(),
+      shiny::br(),
       shiny::textInput("prep", "Prepared by"),
       shiny::textInput("del", "For delivery to"),
       shiny::textInput("comment", "Additional comments"),
