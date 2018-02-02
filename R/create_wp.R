@@ -12,6 +12,8 @@ create_wp <- function() {
     miniUI::miniContentPanel(
       ## Add UI items
       shiny::textInput("name", "Work product name"),
+      shiny::textInput("folder", "Folder name"),
+      shiny::em("(Folder name should be short)"),
       shiny::textInput("prep", "Prepared by"),
       shiny::textInput("del", "For delivery to"),
       shiny::textInput("comment", "Additional comments"),
@@ -70,9 +72,15 @@ create_wp <- function() {
 
       # Turn it into a wp-id in 3-number form
       id <- sprintf("%03d", id)
+      
+      # Folder name
+      nm <- tolower(input$folder)
+      nm <- stringr::str_replace_all(nm, "[:punct:]", "")
+      nm <- stringr::str_replace_all(nm, " ", "-")
+      nm <- paste(id, nm, sep = "-")
 
       # Make the directory to put it in
-      dir.create(file.path(wp_path, id))
+      dir.create(file.path(wp_path, nm))
 
       # Close the app
       shiny::stopApp()
