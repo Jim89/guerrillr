@@ -56,8 +56,9 @@ create_ga_project <- function(path, ...) {
   author <- paste("For more details, please contact:", proj_author)
 
   # Get if user wants to make trackers
-  track <- params[["make_trackers"]]
-
+  track <- ifelse(is.null(params[["make_trackers"]]), TRUE, params[["make_trackers"]])
+  
+  
   # Create readme --------------------------------------------------------------
   # Create the readme skeleton
   skeleton <- paste("This is a [Guerilla Analytics](http://guerrilla-analytics.net/) project. It contains the following folders:\n\n* __data__: contains the data for the project\n* __pm__: contains project management artifacts\n* __wp__: contains individual work products\n*__src__: contains end-to-end analytics code, and functions developed in the project\n")

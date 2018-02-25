@@ -25,3 +25,4 @@ for creating the project, and [addins](https://rstudio.github.io/rstudioaddins/)
 for creating and viewing work products
 * 0.1.0 - Document functions, try to ensure they work outside of Rstudio; and
 get ready for first release.
+* 0.1.1 - Fix bug creating project

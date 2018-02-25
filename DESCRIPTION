@@ -1,7 +1,7 @@
 Package: guerrillr
 Type: Package
 Title: Guerrilla Analytics workflows for R
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Leach", "Jim", email = "jimmy22theave@gmail.com", role = c("aut", "cre")),
              person("Ridge", "Enda", role = "ctb"))
 Description: A small package to make using Guerrilla Analytics
