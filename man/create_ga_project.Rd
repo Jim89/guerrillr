@@ -6,9 +6,32 @@
 \usage{
 create_ga_project(path, ...)
 }
+\arguments{
+\item{path}{the file path to where the project should be saved}
+
+\item{...}{additional project parameters, provided as a list. See Details.}
+}
 \description{
-A function created purely to facilitate the \href{https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html}{project template} mechanism in RStudio
+Create a Guerrilla Analytics project directory. This project template is
+also available as an Rstudio \href{https://rstudio.github.io/rstudio-extensions/rstudio_project_templates.html}{projecttemplate}.
+}
+\details{
+This function can be used to set up a minimal project following \href{https://guerrilla-analytics.net/}{GuerrillaAnalytics} conventions. It is imagined that
+this function will not frequently be called directly, but will instead be
+called via an Rstudio project template. As such, the additional \code{...}
+parameters will not normally be specified directly, only entered in to the
+Rstudio project-creation dialog window. When creating the project by calling
+this function directly, the following additional parameters can be supplied
+the \code{...} arguments:
+\itemize{
+\item \code{project_name} - a descriptive/short name for the project, used to populate
+the readme header
+\item \code{project_author} - the name of the person who created the project
+\item \code{make_trackers} - a \code{TRUE}/\code{FALSE} value indicating if work product and
+data trackers should be created (defaults to `TRUE`` in Rstudio)
+}
 }
 \references{
-"Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+"Guerrilla Analytics: A Practical Approach to Working with Data",
+Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }

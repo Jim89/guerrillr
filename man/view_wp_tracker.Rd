@@ -7,8 +7,9 @@
 view_wp_tracker()
 }
 \description{
-A function created purely to facilitate an RStudio addin to display the current work products tracker.
+Display the work products tracker in a mini Shiny application.
 }
 \references{
-"Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+"Guerrilla Analytics: A Practical Approach to Working with Data",
+Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }

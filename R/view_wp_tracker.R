@@ -1,12 +1,11 @@
 #' View the work products tracker
 #'
-#' A function created purely to facilitate an RStudio addin to display the current work products tracker.
+#' Display the work products tracker in a mini Shiny application.
 #'
-#' @references "Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
-
-
+#' @references "Guerrilla Analytics: A Practical Approach to Working with Data",
+#'   Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+#' @export
 view_wp_tracker <- function() {
-
   # Create the UI --------------------------------------------------------------
   wp_ui <- miniUI::miniPage(
     miniUI::miniContentPanel(
@@ -23,7 +22,7 @@ view_wp_tracker <- function() {
     wp_path <- file.path(".", "wp")
 
     # Check if the tracker exists - if it doesn't we can't do much!
-    if ( !file.exists(wp_path) ) {
+    if (!file.exists(wp_path)) {
       message("Work products folder does not exist. Did you initialise the project with one?")
       shiny::stopApp()
     }
@@ -32,13 +31,13 @@ view_wp_tracker <- function() {
     tracker_path <- file.path(wp_path, "work-products-tracker.csv")
 
     # Check if the tracker exists - if it doesn't we can't do much!
-    if ( !file.exists(tracker_path) ) {
+    if (!file.exists(tracker_path)) {
       message("Work products tracker does not exist. Did you initialise the project with one?")
       shiny::stopApp()
     }
 
     # Get the current tracker
-    current_tracker <- read.csv(
+    current_tracker <- utils::read.csv(
       tracker_path,
       stringsAsFactors = FALSE
     )
@@ -66,5 +65,3 @@ view_wp_tracker <- function() {
   viewer <- shiny::dialogViewer("View work products", width = 1000)
   shiny::runGadget(wp_ui, wp_server, viewer = viewer, stopOnCancel = FALSE)
 }
-
-

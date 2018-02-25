@@ -4,11 +4,16 @@
 \alias{create_wp}
 \title{Create a new work product}
 \usage{
-create_wp()
+create_wp(wp_dir = "wp", tracker_name = "work-products-tracker.csv")
+}
+\arguments{
+\item{wp_dir}{the name of the work product directory within the project}
+
+\item{tracker_name}{the name of the tracker file in the work product
+directory}
 }
 \description{
-A function created purely to facilitate an RStudio addin to create a new work
-product.
+Create a new work product in the specified work product directory.
 }
 \references{
 "Guerrilla Analytics: A Practical Approach to Working with Data",
