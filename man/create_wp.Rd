@@ -7,8 +7,10 @@
 create_wp()
 }
 \description{
-A function created purely to facilitate an RStudio addin to create a new work product.
+A function created purely to facilitate an RStudio addin to create a new work
+product.
 }
 \references{
-"Guerrilla Analytics: A Practical Approach to Working with Data", Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
+"Guerrilla Analytics: A Practical Approach to Working with Data",
+Enda Ridge (\href{https://guerrilla-analytics.net/}{Website})
 }
